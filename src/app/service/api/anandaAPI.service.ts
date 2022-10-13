@@ -17,8 +17,12 @@ export class AnandapiService{
     let uri = this.urlLogin+"auth";
     return this.http.post<ResponseI>(uri,form);
   }
-  traerDatoPorId(ncmItem:string):Observable<Volumetria>{
-    let uri = this.url+"/volumetria/"+ncmItem;
+  traerDatoPorId(itemCode:string):Observable<Volumetria>{
+    let uri = this.url+"/volumetria/"+itemCode;
     return this.http.get<Volumetria>(uri);
+  }
+  putVolumetria(form:any,itemCode:string):Observable<ResponseI>{
+    let uri = this.url+"/volumetria/"+itemCode;
+    return this.http.put<ResponseI>(uri,form);
   }
 }

@@ -12,7 +12,7 @@
                         <button class="col-md-6" type="button" (click)="buscarDato()" >Buscar</button> 
                     </div>
                 </div>
-                <form class="form-card" [formGroup]="editarForm">
+                <form class="form-card" [formGroup]="editarForm" (ngSubmit)="putForm(editarForm.value,itemCode.valueOf())">
 
                     <br>
                     <div class="row justify-content-between text-left">
@@ -28,7 +28,7 @@
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> 
                             <label class="form-control-label px-3" for="alto">Alto<span class="text-danger"> *</span></label> 
-                            <input type="text" id="alto" name="alto" formControlName="alto"> 
+                            <input type="text" id="alto" name="alto"formControlName="alto"> 
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex"> 
                             <label class="form-control-label px-3" for="volumen">Volumen<span class="text-danger"> *</span></label> 

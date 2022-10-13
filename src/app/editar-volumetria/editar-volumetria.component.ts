@@ -20,10 +20,10 @@ export class EditarVolumetriaComponent implements OnInit {
 
   datosVolumetria:Volumetria;
   editarForm = new FormGroup({
+    alto: new FormControl('',Validators.required),
     itemCode:new FormControl('',Validators.required),
     largo:new FormControl('',Validators.required),
     ancho: new FormControl('',Validators.required),
-    alto:new FormControl('',Validators.required),
     volumen:new FormControl('',Validators.required),
     peso:new FormControl('',Validators.required)
   })
@@ -36,16 +36,23 @@ export class EditarVolumetriaComponent implements OnInit {
   buscarDato():void{
 
     this.api.traerDatoPorId(this.itemCode).subscribe((data:any)=>{
-      this.datosVolumetria = data[0];
+      console.log(data);
+      this.datosVolumetria = data;
+      console.log(this.datosVolumetria);
+      
       this.editarForm.setValue({
-        'alto':this.datosVolumetria.alto,
         'ancho':this.datosVolumetria.ancho,
         'largo':this.datosVolumetria.largo,
+        'alto':this.datosVolumetria.alto,
         'volumen':this.datosVolumetria.volumen,
         'peso':this.datosVolumetria.peso,
         'itemCode':this.itemCode
       })
     })
   }
-
+  putForm(form:any,itemCode:string){
+    this.api.putVolumetria(form,itemCode).subscribe((data:any)=>{
+      console.log;
+    })
+  }
 }
