@@ -8,12 +8,13 @@ import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    rountingComponent
+    rountingComponent,
   ],
   imports: [
     BrowserModule,

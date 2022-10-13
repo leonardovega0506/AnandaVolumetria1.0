@@ -1,1 +1,53 @@
-<p>editar-volumetria works!</p>
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col- text-center">
+            <h3>Ananda Volumetria</h3>
+            <div class="card">
+                <h5 class="text-center mb-4">Volumetria</h5>
+                <div class="row ">
+                    <div class="form-group col-sm-6 flex-column d-flex"> 
+                        <label class="form-control-label px-3" for="itemCode">Numero del producto<span class="text-danger"> *</span></label> 
+                        <input type="text" class="col-md-4"  placeholder="itemCode" [(ngModel)]="itemCode">
+                        <br>
+                        <button class="col-md-6" type="button" (click)="buscarDato()" >Buscar</button> 
+                    </div>
+                </div>
+                <form class="form-card" [formGroup]="editarForm">
+
+                    <br>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <label class="form-control-label px-3" for="largo">Largo<span class="text-danger"> *</span></label> 
+                            <input type="text" id="largo" name="largo" formControlName="largo"> 
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <label class="form-control-label px-3" for="ancho">Ancho<span class="text-danger"> *</span></label> 
+                            <input type="text" id="ancho" name="lname" formControlName="ancho"> 
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <label class="form-control-label px-3" for="alto">Alto<span class="text-danger"> *</span></label> 
+                            <input type="text" id="alto" name="alto" formControlName="alto"> 
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <label class="form-control-label px-3" for="volumen">Volumen<span class="text-danger"> *</span></label> 
+                            <input type="text" id="volumen" name="volumen" formControlName="volumen"> 
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <label class="form-control-label px-3" for="peso">Peso<span class="text-danger"> *</span></label> 
+                            <input type="text" id="peso" name="peso" formControlName="peso"> 
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="form-group col-sm-6"> 
+                            <button type="submit" class="btn-block btn-primary">Enviar Volumetria</button> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

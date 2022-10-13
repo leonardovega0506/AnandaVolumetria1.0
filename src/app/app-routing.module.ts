@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { EditarVolumetriaComponent } from './editar-volumetria/editar-volumetria.component';
 
 const routes: Routes = [{
@@ -10,7 +9,6 @@ const routes: Routes = [{
   pathMatch:'full'
 },
   {path:'loginVolumetria',component:LoginComponent},
-  {path:'dashboardVolumetria',component:DashboardComponent},
   {path:'volumetria',component:EditarVolumetriaComponent}
 ];
 
@@ -19,4 +17,4 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const rountingComponent=[LoginComponent,DashboardComponent,EditarVolumetriaComponent]
+export const rountingComponent=[LoginComponent,EditarVolumetriaComponent]
