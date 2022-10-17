@@ -1,8 +1,8 @@
 export interface Volumetria{
-    ancho:string;
-    largo:string;
-    alto:string;
-    volumen:string;
-    peso:string;
-    itemCode:string;
+    ancho:any;
+    largo:any;
+    alto:any;
+    volumen:any;
+    peso:any;
+    itemCode:any;
 }

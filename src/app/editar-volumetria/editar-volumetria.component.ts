@@ -30,8 +30,10 @@ export class EditarVolumetriaComponent implements OnInit {
   
   ngOnInit(): void {
   }
-  obtenerVolumen(){
-
+  obtenerVolumen():any{
+    let volumen:number;
+    volumen= (this.datosVolumetria.alto*this.datosVolumetria.ancho)*this.datosVolumetria.largo;
+      return volumen;
   }
   buscarDato():void{
 
@@ -44,7 +46,7 @@ export class EditarVolumetriaComponent implements OnInit {
         'ancho':this.datosVolumetria.ancho,
         'largo':this.datosVolumetria.largo,
         'alto':this.datosVolumetria.alto,
-        'volumen':this.datosVolumetria.volumen,
+        'volumen':this.obtenerVolumen(),
         'peso':this.datosVolumetria.peso,
         'itemCode':this.itemCode
       })
@@ -55,4 +57,5 @@ export class EditarVolumetriaComponent implements OnInit {
       console.log;
     })
   }
+
 }
